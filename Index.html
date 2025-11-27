@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaGeo </title>
+    <link rel="stylesheet" href="./css/style.css"> 
+    <script src="scrpt.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./img/logo.jpeg" alt="InnovaGeo Logo" class="logo-img">
+                InnovaGeo
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="#hero">Inicio</a>
+                <a href="#Nuestro-Talento">Nuestro Talento</a>
+                <a href="#Servicios">Servicios</a>
+                <a href="#Datos">Datos</a>
+                <a href="#Contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>InnovaGeo Consultoría S.A.S</h1>
+        <p>Tecnología y Planificación al Servicio del Desarrollo Territorial</p>
+    </section>
+    
+    <section id="Nuestro-Talento">
+        <div class="container">
+            <h2>Nuestro Talento</h2>
+            <div class="talent-content">
+                <p>En InnovaGeo Consultoría impulsamos el desarrollo territorial sostenible a través de soluciones innovadoras que integran tecnología, conocimiento y estrategia. Nuestro equipo multidisciplinario combina experiencia en planificación, gestión pública, análisis de datos y sistemas de información geográfica para fortalecer la toma de decisiones en entidades públicas y privadas.</p>
+                <p>Trabajamos con una visión integral del territorio, orientada a la sostenibilidad ambiental, la eficiencia institucional y la transformación digital, contribuyendo a construir territorios más resilientes, competitivos y equitativos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="servicios-grid">
+                <div class="carta">
+                    <h3>Desempeño Institucional</h3>
+                    <p>Fortalecemos la gestión pública mediante el análisis, seguimiento y mejora de los procesos administrativos, técnicos y estratégicos. Acompañamos a las entidades en la optimización de su desempeño institucional, promoviendo eficiencia, innovación, transparencia y cumplimiento de resultados.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+                <div class="carta">
+                    <h3>Ordenamiento Territorial</h3>
+                    <p>Ofrecemos soluciones integrales para la planificación y gestión del territorio, articulando las dimensiones ambiental, social, económica e institucional. Desarrollamos estrategias e instrumentos técnicos que orientan el desarrollo sostenible, la ocupación equilibrada del suelo y la gestión del crecimiento urbano y rural.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+                <div class="carta">
+                    <h3>Modelación Ambiental</h3>
+                    <p>Diseñamos y aplicamos modelos analíticos que integran información ambiental, climática y territorial para evaluar escenarios de sostenibilidad, vulnerabilidad y cambio climático. Nuestros servicios permiten anticipar impactos y fortalecer la toma de decisiones basadas en evidencia científica.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+                <div class="carta">
+                    <h3>Gestión del Riesgo</h3>
+                    <p>Desarrollamos estrategias y herramientas para la identificación, análisis y mitigación de riesgos naturales, sociales y antrópicos. Integramos la gestión del riesgo en los procesos de planificación territorial y ambiental, promoviendo territorios más seguros, resilientes y sostenibles.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+                <div class="carta">
+                    <h3>Manejo de Infraestructura</h3>
+                    <p>Realizamos el análisis técnico y estructural de infraestructuras viales, evaluando su desempeño, funcionalidad y condiciones de sostenibilidad. Apoyamos la planificación y priorización de intervenciones mediante herramientas de diagnóstico y modelación.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+                <div class="carta">
+                    <h3>Sistemas de Información Geográfica (SIG)</h3>
+                    <p>Implementamos soluciones tecnológicas geoespaciales que potencian la planificación, el monitoreo y la gestión territorial. A través de análisis, modelación espacial y visualización de datos, facilitamos la comprensión integral del territorio y la optimización de recursos.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+                <div class="carta">
+                    <h3>Mediciones (índices e indicadores)</h3>
+                    <p>Diseñamos sistemas de indicadores e índices de desempeño institucional, territorial y ambiental que fortalecen la gestión basada en resultados. Nuestras metodologías permiten evaluar avances, identificar brechas y sustentar decisiones estratégicas con evidencia técnica.</p>
+                    <button onclick="alert('Próximamente: información detallada sobre este servicio')">Más Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Datos">
+        <div class="container">
+            <h2>Análisis de Datos Territoriales</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); font-size: 1.1rem;">
+                Visualización interactiva de indicadores clave para la toma de decisiones en desarrollo territorial
+            </p>
+            
+            <div class="location-selector">
+                <h3> Consulta Datos por Ubicación</h3>
+                <div class="selector-grid">
+                    <div class="selector-field">
+                        <label for="departamento">Departamento:</label>
+                        <select id="departamento" onchange="updateMunicipios()">
+                            <option value="">Selecciona un departamento</option>
+                        </select>
+                    </div>
+                    <div class="selector-field">
+                        <label for="municipio">Municipio:</label>
+                        <select id="municipio" onchange="updateLocationData()">
+                            <option value="">Selecciona un municipio</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="locationDataCards" class="location-cards">
+                    <div class="info-message">
+                        Selecciona un departamento y municipio para ver los datos específicos
+                    </div>
+                </div>
+            </div>
+
+            <div id="chartsContainer"></div>
+        </div>
+    </section>
+
+    <section id="Contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <ul> 
+                        <li><strong>Carol Melo Tello</strong></li>
+                        <li>Gerente Técnico</li>
+                        <li>Celular: 3112161687</li>
+                        <li>Correo: cmelo@innovageo.com.co</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark);">Envíanos un mensaje</h3>
+                    <form id="contactForm">
+                        <label for="nombre">
+                            Nombre:
+                            <input type="text" id="nombre" name="nombre" required>
+                        </label>
+                        <label for="apellido">
+                            Apellido:
+                            <input type="text" id="apellido" name="apellido" required>
+                        </label>
+                        <label for="correo">
+                            Correo:
+                            <input type="email" id="correo" name="correo" required>
+                        </label>
+                        <label for="comentario">
+                            Comentario:
+                            <textarea id="comentario" name="comentario" required></textarea>
+                        </label>
+                        <button type="submit">Enviar</button>
+                        <div class="success-message" id="successMessage">
+                            ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; InnovaGeo 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
